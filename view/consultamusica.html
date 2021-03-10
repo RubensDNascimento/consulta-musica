@@ -25,21 +25,32 @@
         <input type="button" id="btnLimpar" value="Limpar Tudo">
     </div>
     <div id="divImagem">
-        <p>Imagem:</p>
-        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" id="imgBanda" />
+        <p id="txtTituloImagem"></p>
+        <a id="linkBanda" href="" target="_blank">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" id="imgBanda" />
+        </a>
         <small id="erroImagem" class="erroVermelho"></small>
     </div>
     <div id="divAlbum">
-        <p>Album:</p>
+        <p id="txtTituloAlbum"></p>
+
+        <a id="linkAlbum" href="" target="_blank">
+            <pre id="txtAlbum" class="text"></pre>
+        </a>
+        <p id="txtTituloAlbumAno"></p>
+        <pre id="txtAlbumAno" class="text"></pre>
+        <!-- 
         <textarea name="album" id="txtAlbum" cols="10" rows="10"></textarea>
         <textarea name="albumAno" id="txtAlbumAno" cols="5" rows="1"></textarea>
+        -->
         <small id="erroAlbum" class="erroVermelho"></small>
     </div>
     <div id="divLetra" class="text">
-        <p>Letra:</p>
-        <pre class="text">
-            <textarea name="letra" id="txtLetra" cols="70" rows="50"></textarea>
-        </pre>
+
+        <a id="linkMusica" href="" target="_blank">
+            <p id="txtTituloLetra"></p>
+        </a>
+        <pre id="txtLetra" class="text"></pre>
 
     </div>
     <div id="divCreditos">

@@ -1,15 +1,36 @@
 function limparResultados() {
-    document.getElementById('txtAlbum').value = "";
-    document.getElementById('erroAlbum').innerHTML = "";
-    document.getElementById('txtAlbumAno').value = "";
-    document.getElementById('imgBanda').setAttribute('src', "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
-    document.getElementById('erroImagem').innerHTML = "";
-    document.getElementById('txtLetra').value = "";
+    $('#txtAlbum').text("");
+    $('#txtAlbumAno').text("");
+    $('#txtLetra').text("");
+
+    $('#imgBanda').attr('src', "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
+
+    $('#erroAlbum').text("");
+    $('#erroImagem').text("");
+    $('#erroBanda').text("");
+    $('#erroMusica').text("");
+
+    $('#txtTituloImagem').text("");
+    $('#txtTituloAlbum').text("");
+    $('#txtTituloAlbumAno').text("");
+    $('#txtTituloLetra').text("");
+
+
+    $('#linkBanda').attr('src', "");
+    $('#linkAlbum').attr('src', "");
+    $('#linkMusica').attr('src', "");
+
+    if ($('#btnOriginal')) {
+        $('#btnOriginal').remove();
+        $('#btnTraducao').remove();
+    }
+    //document.getElementById('txtLetra').value = "";
+
 
 }
 
 function limparTudo() {
     limparResultados();
-    document.getElementById('txtBanda').value = "";
-    document.getElementById('txtMusica').value = "";
+    $('#txtBanda').val("");
+    $('#txtMusica').val("");
 }
