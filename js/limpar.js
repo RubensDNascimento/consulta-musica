@@ -24,6 +24,12 @@ function limparResultados() {
         $('#btnOriginal').remove();
         $('#btnTraducao').remove();
     }
+
+    if ($('#btnSim')) {
+        $('#btnSim').remove();
+        $('#btnNao').remove();
+    }
+
     //document.getElementById('txtLetra').value = "";
 
 

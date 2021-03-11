@@ -13,7 +13,7 @@
 
     <h1>Consulta Musica</h1>
 
-    <div>
+    <div id="inputDados">
 
         <label>Banda ou Artista: <input type="text" name="banda" id="txtBanda" required minlength="1"/></label>
         <small id="erroBanda" class="erroVermelho"></small>
@@ -24,6 +24,8 @@
         <input type="button" id="btnBuscar" value="Buscar">
         <input type="button" id="btnLimpar" value="Limpar Tudo">
     </div>
+    <div id="divBtnVoltar">
+        <input type="button" id="btnVoltar" value="Limpar e Voltar" style="display: none;"></div>
     <div id="divImagem">
         <p id="txtTituloImagem"></p>
         <a id="linkBanda" href="" target="_blank">
