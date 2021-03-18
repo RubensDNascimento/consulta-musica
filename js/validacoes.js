@@ -3,7 +3,8 @@ function validar(artist, song) {
     var song = document.getElementById('txtMusica').value;
 
     if (artist == "" || artist.length <= 1) {
-        document.getElementById('erroBanda').innerHTML = "Banda ou Artista invalido!";
+        document.getElementById('erroBanda').innerHTML = " Banda ou Artista invalido!";
+        //alert("Banda ou Artista invalido!");
         document.getElementById('txtBanda').focus();
         return false;
     } else {
@@ -11,6 +12,7 @@ function validar(artist, song) {
     }
     if (song == "" || song.length < 3) {
         document.getElementById('erroMusica').innerHTML = "Musica invalida!";
+        //alert("Musica invalida!");
         document.getElementById('txtMusica').focus();
         return false;
     } else {

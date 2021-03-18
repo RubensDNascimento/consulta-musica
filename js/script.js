@@ -3,8 +3,6 @@ $(document).ready(function() {
     $("#btnBuscar").click(function() {
 
         limparResultados();
-        document.getElementById("inputDados").style.display = "none";
-        document.getElementById("btnVoltar").style.display = "inline";
         var artist = $("#txtBanda").val();
         var song = $("#txtMusica").val();
 
@@ -45,6 +43,8 @@ $(document).ready(function() {
 
                     if (data.type == 'exact' || data.type == 'aprox') {
 
+                        document.getElementById("inputDados").style.display = "none";
+                        document.getElementById("btnVoltar").style.display = "inline";
                         console.log(urlLet);
                         console.log(urlImg);
                         console.log(urlAlb);
@@ -174,14 +174,22 @@ $(document).ready(function() {
 
 
                     } else if (data.type == 'song_notfound') {
-                        $("#txtLetra").text(
+                        /*$("#txtLetra").text(
                             "Musica " + song + " não encontrada!"
-                        )
+                        )*/
+                        //alert("Musica " + song + " não encontrada!");
+
+                        document.getElementById('erroMusica').innerHTML = "Musica " + song + " não encontrada!";
+                        document.getElementById('txtMusica').focus();
+
                     } else {
 
-                        $("#txtLetra").text(
+                        /*$("#txtLetra").text(
                             "Banda ou Artista " + artist + " não econtrado(a)!"
-                        )
+                        )*/
+                        //alert("Banda ou Artista " + artist + " não econtrado(a)!");
+                        document.getElementById('erroBanda').innerHTML = "Banda " + artist + " não encontrada!";
+                        document.getElementById('txtBanda').focus();
                     }
 
 

@@ -14,21 +14,30 @@
 
         <h1>Consulta Musica</h1>
         <div id="inputDados">
+            <div class="divInput">
+                <label>Banda ou Artista: <input type="text" name="banda" id="txtBanda" required minlength="1"/></label>
+                <small id="erroBanda" class="erroVermelho"></small>
+            </div>
+            <div class="divInput">
+                <label id="labelMusica">Musica: <input type="text" name="musica" id="txtMusica" required minlength="3"></label>
+                <small id="erroMusica" class="erroVermelho"></small>
+            </div>
 
-            <label>Banda ou Artista: <input type="text" name="banda" id="txtBanda" required minlength="1"/></label>
-            <small id="erroBanda" class="erroVermelho"></small>
+            <div id="divBotaoInput">
+                <input type="button" id="btnBuscar" value="Buscar" class="botaoInput">
+                <input type="button" id="btnLimpar" value="Limpar Tudo" class="botaoInput">
+            </div>
 
-            <label>Musica: <input type="text" name="musica" id="txtMusica" required minlength="3"></label>
-            <small id="erroMusica" class="erroVermelho"></small>
 
-            <input type="button" id="btnBuscar" value="Buscar">
-            <input type="button" id="btnLimpar" value="Limpar Tudo">
         </div>
 
         <div id="divBtnVoltar">
             <input type="button" id="btnVoltar" value="Limpar e Voltar" style="display: none;"></div>
 
+
+        <p id="txtTituloLetra"></p>
         <div id="divResultado">
+
             <div id="divBandaAlbum">
                 <div id="divImagem">
                     <p id="txtTituloImagem"></p>
@@ -41,7 +50,7 @@
                     <p id="txtTituloAlbum"></p>
 
                     <a id="linkAlbum" href="" target="_blank">
-                        <pre id="txtAlbum" class="text"></pre>
+                        <p id="txtAlbum" class="text"></p>
                     </a>
                     <p id="txtTituloAlbumAno"></p>
                     <pre id="txtAlbumAno" class="text"></pre>
@@ -57,7 +66,7 @@
             <div id="divLetra" class="text">
 
                 <a id="linkMusica" href="" target="_blank">
-                    <p id="txtTituloLetra"></p>
+
                 </a>
                 <pre id="txtLetra" class="text"></pre>
             </div>
