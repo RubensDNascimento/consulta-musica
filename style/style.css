@@ -22,12 +22,32 @@ body {
     align-self: flex-end;
 }
 
-#divLetra {
-    width: 80%;
+@media (max-width: 880px) {
+    #divResultado {
+        flex-direction: column;
+        align-items: center;
+    }
+    #divLetra {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #divBandaAlbum {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+    }
 }
 
-#divBandaAlbum {
-    width: 20%;
+@media (min-width: 880px) {
+    #divLetra {
+        width: 56.4rem;
+    }
+    #divBandaAlbum {
+        width: 26.5rem;
+    }
 }
 
 #divAlbum {
